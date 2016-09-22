@@ -1,0 +1,137 @@
+<estados>
+	<estado>
+		<codigoestado>01</codigoestado>
+		<nome>Acre</nome>
+		<uf>AC</uf>
+	</estado>
+	<estado>
+		<codigoestado>02</codigoestado>
+		<nome>Alagoas</nome>
+		<uf>AL</uf>
+	</estado>
+	<estado>
+		<codigoestado>03</codigoestado>
+		<nome>Amazonas</nome>
+		<uf>AM</uf>
+	</estado>
+	<estado>
+		<codigoestado>04</codigoestado>
+		<nome>Amapá</nome>
+		<uf>AP</uf>
+	</estado>
+	<estado>
+		<codigoestado>05</codigoestado>
+		<nome>Bahia</nome>
+		<uf>BA</uf>
+	</estado>
+	<estado>
+		<codigoestado>06</codigoestado>
+		<nome>Ceará</nome>
+		<uf>CE</uf>
+	</estado>
+	<estado>
+		<codigoestado>07</codigoestado>
+		<nome>Distrito Federal</nome>
+		<uf>DF</uf>
+	</estado>
+	<estado>
+		<codigoestado>08</codigoestado>
+		<nome>Espírito Santo</nome>
+		<uf>ES</uf>
+	</estado>
+	<estado>
+		<codigoestado>09</codigoestado>
+		<nome>Goiás</nome>
+		<uf>GO</uf>
+	</estado>
+	<estado>
+		<codigoestado>10</codigoestado>
+		<nome>Maranhão</nome>
+		<uf>MA</uf>
+	</estado>
+	<estado>
+		<codigoestado>11</codigoestado>
+		<nome>Minas Gerais</nome>
+		<uf>MG</uf>
+	</estado>
+	<estado>
+		<codigoestado>12</codigoestado>
+		<nome>Mato Grosso do Sul</nome>
+		<uf>MS</uf>
+	</estado>
+	<estado>
+		<codigoestado>13</codigoestado>
+		<nome>Mato Grosso</nome>
+		<uf>MT</uf>
+	</estado>
+	<estado>
+		<codigoestado>14</codigoestado>
+		<nome>Pará</nome>
+		<uf>PA</uf>
+	</estado>
+	<estado>
+		<codigoestado>15</codigoestado>
+		<nome>Paraíba</nome>
+		<uf>PB</uf>
+	</estado>
+	<estado>
+		<codigoestado>16</codigoestado>
+		<nome>Pernambuco</nome>
+		<uf>PE</uf>
+	</estado>
+	<estado>
+		<codigoestado>17</codigoestado>
+		<nome>Piauí</nome>
+		<uf>PI</uf>
+	</estado>
+	<estado>
+		<codigoestado>18</codigoestado>
+		<nome>Paraná</nome>
+		<uf>PR</uf>
+	</estado>
+	<estado>
+		<codigoestado>19</codigoestado>
+		<nome>Rio de Janeiro</nome>
+		<uf>RJ</uf>
+	</estado>
+	<estado>
+		<codigoestado>20</codigoestado>
+		<nome>Rio Grande do Norte</nome>
+		<uf>RN</uf>
+	</estado>
+	<estado>
+		<codigoestado>21</codigoestado>
+		<nome>Rondônia</nome>
+		<uf>RO</uf>
+	</estado>
+	<estado>
+		<codigoestado>22</codigoestado>
+		<nome>Roraima</nome>
+		<uf>RR</uf>
+	</estado>
+	<estado>
+		<codigoestado>23</codigoestado>
+		<nome>Rio Grande do Sul</nome>
+		<uf>RS</uf>
+	</estado>
+	<estado>
+		<codigoestado>24</codigoestado>
+		<nome>Santa Catarina</nome>
+		<uf>SC</uf>
+	</estado>
+	<estado>
+		<codigoestado>25</codigoestado>
+		<nome>Sergipe</nome>
+		<uf>SE</uf>
+	</estado>
+	<estado>
+		<codigoestado>26</codigoestado>
+		<nome>São Paulo</nome>
+		<uf>SP</uf>
+	</estado>
+	<estado>
+		<codigoestado>27</codigoestado>
+		<nome>Tocantins</nome>
+		<uf>TO</uf>
+	</estado>
+</estados>
