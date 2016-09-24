@@ -1,8 +1,7 @@
 public class Eleitor {
 	
-	private int titulo;
+	private int titulo, votos = 0;
 	private String nome;
-	private Voto voto;
 	
 	public Eleitor(int titulo, String nome){
 		this.setTitulo(titulo);
@@ -24,16 +23,11 @@ public class Eleitor {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public Voto getVoto() {
-		return voto;
+	public void setVotos(){
+		this.votos++;
 	}
-
-	public void setVoto(Voto voto) {
-		this.voto = voto;
+	public int getVotos(){
+		return this.votos;
 	}
-	
-	
-	
 
 }
