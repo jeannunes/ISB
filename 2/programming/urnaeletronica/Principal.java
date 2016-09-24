@@ -4,7 +4,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		Urna urna;
+		Urna urna; asiuasiuas
 		Vereador vereador;
 		Prefeito prefeito;
 		Eleitor eleitor;
