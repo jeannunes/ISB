@@ -1,9 +1,9 @@
 public class Administrador {
 	
-	private int codigo;
-	private String senha, nome;
+	private int codigo, senha;
+	private String nome;
 	
-	public Administrador(int codigo, String nome, String senha){
+	public Administrador(int codigo, String nome, int senha){
 		this.setCodigo(codigo);
 		this.setNome(nome);
 		this.setSenha(senha);
@@ -19,15 +19,11 @@ public class Administrador {
 		}
 		return false;
 	}
-	public String getSenha() {
+	public int getSenha() {
 		return senha;
 	}
-	public boolean setSenha(String senha) {
-		if ( senha.length() == 6 ) {
-			this.senha = senha;
-			return true;
-		}
-		return false;
+	public void setSenha(int senha) {
+		this.senha = senha;
 	}
 	public String getNome() {
 		return nome;
@@ -35,7 +31,4 @@ public class Administrador {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
-
 }
