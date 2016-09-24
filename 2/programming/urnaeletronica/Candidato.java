@@ -1,34 +1,27 @@
-public class Administrador {
+public class Candidato {
 	
-	private int codigo, senha;
-	private String nome;
-	
-	public Administrador(int codigo, String nome, int senha){
-		this.setCodigo(codigo);
+	private String nome, partido;
+
+	public Candidato(String nome, String pardito){
 		this.setNome(nome);
-		this.setSenha(senha);
+		this.setPartido(pardito);
 	}
 	
-	public int getCodigo() {
-		return codigo;
-	}
-	public boolean setCodigo(int codigo) {
-		if ( codigo > 0 ) {
-			this.codigo = codigo;
-			return true;
-		}
-		return false;
-	}
-	public int getSenha() {
-		return senha;
-	}
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public String getPartido() {
+		return partido;
+	}
+
+	public void setPartido(String partido) {
+		this.partido = partido;
+	}
+
+
 }
