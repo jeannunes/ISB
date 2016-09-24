@@ -50,6 +50,62 @@ public class Urna {
 		return false;
 	}
 	
+	public boolean logar(int codigo, int senha){
+		Administrador temp;
+		int cont;
+		
+		for(cont = 0; cont < administradores.size(); cont++){
+			temp = administradores.get(cont);
+			if (temp.getCodigo() == codigo && temp.getSenha() == senha) {
+				return true;
+			}
+		}
+		if (cont == administradores.size()) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	public Eleitor buscarEleitor(int numero){
+		Eleitor temp;
+		int cont;
+		
+		for(cont = 0; cont < eleitores.size(); cont++){
+			temp = eleitores.get(cont);
+			if (temp.getTitulo() == numero) {
+				return temp;
+			}
+		}
+		return null;
+	}
+	
+	public Prefeito buscarPrefeito(int numero){
+		Prefeito temp;
+		int cont;
+		
+		for(cont = 0; cont < prefeitos.size(); cont++){
+			temp = prefeitos.get(cont);
+			if (temp.getNumero() == numero) {
+				return temp;
+			}
+		}
+		return null;
+	}
+	
+	public Vereador buscarVereador(int numero){
+		Vereador temp;
+		int cont;
+		
+		for(cont = 0; cont < vereadores.size(); cont++){
+			temp = vereadores.get(cont);
+			if (temp.getNumero() == numero) {
+				return temp;
+			}
+		}
+		return null;
+	}
+	
 	public int contarEleitores(){
 		return eleitores.size();
 	}
@@ -86,11 +142,37 @@ public class Urna {
 	}
 	
 	public boolean votarPrefeito(int numero){
-		return false;
+		return prefeitos.get(numero).votar(numero);
 	}
 	
 	public boolean votarVereador(int numero){
-		return false;
+		return vereadores.get(numero).votar(numero);
+	}
+	
+	public void exibirResultados(){
+		int cont;
+		Prefeito tempP;
+		Vereador tempV;
+		
+		System.out.println("PREFEITOS");
+		for(cont = 0; cont < prefeitos.size(); cont++){
+			tempP = prefeitos.get(cont);
+			System.out.println("Candidato #" + tempP.getNumero());
+			System.out.println("\tNome " + tempP.getNome());
+			System.out.println("\tPartido " + tempP.getPartido());
+			System.out.println("\tVotos " + tempP.getVotos() + "(" + (tempP.getVotos()*100/eleitores.size()) + "%)");
+		}
+		
+		System.out.println("VEREADORES");
+		for(cont = 0; cont < vereadores.size(); cont++){
+			tempV = vereadores.get(cont);
+			System.out.println("Candidato #" + tempV.getNumero());
+			System.out.println("\tNome " + tempV.getNome());
+			System.out.println("\tPartido " + tempV.getPartido());
+			System.out.println("\tVotos " + tempV.getVotos() + "(" + (tempV.getVotos()*100/eleitores.size()) + "%)");
+		}
+		
+		
 	}
 
 }
