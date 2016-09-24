@@ -66,7 +66,8 @@ public class Principal {
 				
 				do {
 					
-					
+					System.out.println("1 - Incluir Voto");
+					System.out.println("2 - Encerrar Votação");
 					
 				} while(false);
 				
