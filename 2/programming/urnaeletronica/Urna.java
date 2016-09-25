@@ -142,11 +142,15 @@ public class Urna {
 	}
 	
 	public boolean votarPrefeito(int numero){
-		return prefeitos.get(numero).votar(numero);
+		Prefeito tempP;
+		tempP = this.buscarPrefeito(numero);
+		return tempP.votar(numero);
 	}
 	
 	public boolean votarVereador(int numero){
-		return vereadores.get(numero).votar(numero);
+		Vereador tempP;
+		tempP = this.buscarVereador(numero);
+		return tempP.votar(numero);
 	}
 	
 	public void exibirResultados(){
