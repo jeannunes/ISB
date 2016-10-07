@@ -1,19 +1,21 @@
 # Criar um novo banco de dados
 CREATE DATABASE testes;
 
+USE testes
+
 # Criar tabelas
-# CREATE TABLE NOME_DA_TAELA (
-#	id int(10) unsigned NOT NULL AUTO_INCREMENT,
-#    nome varchar(50) DEFAULT NULL,
-#    dataNascimento date DEFAULT NULL,
-#    PRIMARY KEY (id)
-# )
-# Tipos de Campos
-# INT
-# VARCHAR
-# TEXT
-# DATE
-# TIME
+CREATE TABLE NOME_DA_TAELA (
+id int(10) unsigned NOT NULL AUTO_INCREMENT,
+nome varchar(50) DEFAULT NULL,
+dataNascimento date DEFAULT NULL,
+PRIMARY KEY (id)
+)
+/* Tipos de Campos
+INT
+VARCHAR
+TEXT
+DATE
+TIME */
 
 
 CREATE TABLE restaurantes (
@@ -25,3 +27,8 @@ CREATE TABLE restaurantes (
     estacionamento BOOL,
     PRIMARY KEY (id)
 )
+
+ALTER TABLE restaurantes
+	# DROP COLUMN nome_da_coluna
+	ADD COLUMN horarioAbertura time DEFAULT NULL,
+    ADD COLUMN horarioFechamento time DEFAULT NULL
