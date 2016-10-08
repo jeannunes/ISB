@@ -37,4 +37,4 @@ INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, ho
 INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, horarioAbertura, horarioFechamento) VALUES (null, "Restaurante Japoês", "Rua XV", 30, true, false, "18:00", "00:00");
 INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, horarioAbertura, horarioFechamento) VALUES (null, "Restaurante Mineiro", "Rua do Zé", 60, true, true, "11:00", "15:00");
 
-SELECT * FROM restaurantes ORDER BY id DESC LIMIT 0,2
+SELECT * FROM restaurantes WHERE nome LIKE "%Japonês%" ORDER BY id DESC LIMIT 0,2;
