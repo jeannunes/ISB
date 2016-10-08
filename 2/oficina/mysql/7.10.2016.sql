@@ -31,4 +31,10 @@ CREATE TABLE restaurantes (
 ALTER TABLE restaurantes
 	# DROP COLUMN nome_da_coluna
 	ADD COLUMN horarioAbertura time DEFAULT NULL,
-    ADD COLUMN horarioFechamento time DEFAULT NULL
+    ADD COLUMN horarioFechamento time DEFAULT NULL;
+   
+INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, horarioAbertura, horarioFechamento) VALUES (null, "Restaurante da Vóvó", "Rua das Flores", 15, true, true, "11:00", "23:00");
+INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, horarioAbertura, horarioFechamento) VALUES (null, "Restaurante Japoês", "Rua XV", 30, true, false, "18:00", "00:00");
+INSERT INTO restaurantes (id, nome, endereco, mesas, cartoes, estacionamento, horarioAbertura, horarioFechamento) VALUES (null, "Restaurante Mineiro", "Rua do Zé", 60, true, true, "11:00", "15:00");
+
+SELECT * FROM restaurantes ORDER BY id DESC LIMIT 0,2
