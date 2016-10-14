@@ -15,16 +15,20 @@ public class Principal {
 			dias.addDia(2, 10);
 			dias.addDia(4, 19);
 			
-			// Exibir a média
-			System.out.println("Media: " + dias.getMedia());
-			
 			// Imprimir o calendário na tela
 			System.out.println("Calendário");
 			dias.mostrarCalendario();
 			
+			// Exibir a média
+			System.out.println("Media: " + dias.getMedia());
+			
 			// Imprimir o calendário ordenado pela temperatura
 			System.out.println("Calendário Ordenado");
 			dias.mostrarCalendario(true);
+			
+			// Imprimir o calendário ordenado pela temperatura
+			System.out.println("Dias com temperaturas altas");
+			dias.getTemperaturasAltas();
 
 	}
 
