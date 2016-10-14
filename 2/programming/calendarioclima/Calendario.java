@@ -1,3 +1,5 @@
+package exercicio1;
+
 import java.util.Arrays;
 
 public class Calendario {
@@ -34,7 +36,7 @@ public class Calendario {
 		System.arraycopy(dias, 0, temp, 0, dias.length);
 		Arrays.sort(temp);
 		for(i = 0; i < temp.length; i++){
-			System.out.println( (i+1) + " = " + dias[i]);
+			System.out.println( (i+1) + " = " + temp[i]);
 		}
 	}
 	
