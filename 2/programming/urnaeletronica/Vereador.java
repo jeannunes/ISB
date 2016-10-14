@@ -12,7 +12,7 @@ public class Vereador extends Candidato {
 	}
 
 	public boolean setNumero(int numero) {
-		if ( (numero > 999 && numero < 100000) || (numero == -1 || numero == 0)) {
+		if ( (numero > 9999 && numero < 100000) || (numero == -1 || numero == 0)) {
 			this.numero = numero;
 			return true;
 		}

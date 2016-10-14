@@ -15,7 +15,7 @@ public class Principal {
 		Scanner scan = new Scanner(System.in);
 		urna = new Urna();
 		
-		administrador = new Administrador(12345, "Jean", 654321);
+		administrador = new Administrador(12345, "JeanLucas", 654321);
 		urna.cadastrarAdministrador(administrador);
 		
 		prefeito = new Prefeito("BRANCO", "BRANCO", 0);
@@ -30,7 +30,7 @@ public class Principal {
 
 		do {
 			
-			System.out.println("AUTENTICAÃ‡ÃƒO");
+			System.out.println("AUTENTICAÇÃO");
 			System.out.println("Codigo:");
 			admCodigo = scan.nextInt();
 			System.out.println("Senha:");
@@ -38,7 +38,7 @@ public class Principal {
 			logado = urna.logar(admCodigo,admSenha);
 			
 			if (!logado) {
-				System.out.println("CÃ³digo e/ou senha incorretos!");
+				System.out.println("Código e/ou senha incorretos!");
 			}
 			
 		} while ( logado == false );
@@ -46,13 +46,13 @@ public class Principal {
 		do {
 			
 			System.out.println("URNA ELETRONICA");
-			System.out.println("Escolha uma opÃ§Ã£o:");
+			System.out.println("Escolha uma opção:");
 			System.out.println("1 - Cadastrar Prefeitos (" + urna.contarPrefeitos() + ")");
 			System.out.println("2 - Cadastrar Vereadores (" + urna.contarVereadores() + ")");
 			System.out.println("3 - Cadastrar Eleitores (" + urna.contarEleitores() + ")");
 			
 			if (urna.validarCadastros()) {
-				System.out.println("4 - Iniciar VotaÃ§Ã£o");
+				System.out.println("4 - Iniciar Votação");
 				System.out.println("5 - Sair");
 			} else {
 				System.out.println("4 - Sair");
@@ -89,7 +89,7 @@ public class Principal {
 				urna.cadastrarEleitor(eleitor);
 			} else if ( urna.validarCadastros() && menu == 4) {
 				
-				System.out.println("A votaÃ§Ã£o serÃ¡ iniciada.");
+				System.out.println("A votação será iniciada.");
 				urna.iniciarVotacao();
 				
 				do {
@@ -104,12 +104,12 @@ public class Principal {
 						
 						if (eleitor != null && eleitor.getVotos() == 0 ) {
 							
-							System.out.print("Eleitor: " + eleitor.getNome());
+							System.out.println("Eleitor: " + eleitor.getNome());
 							
 							// Votar para prefeito
 							do {
 								
-								System.out.println("Digite o nÃºmero do seu candidato a PREFEITO com dois digitos");
+								System.out.println("Digite o número do seu candidato a PREFEITO com dois digitos");
 								System.out.println("ou 0 para votar em  BRANCO");
 								System.out.println("ou -1 para votar NULO");
 								
@@ -123,9 +123,9 @@ public class Principal {
 										System.out.println("Candidato: " + prefeito.getNome());
 										System.out.println("Partido: " + prefeito.getPartido());
 										
-										System.out.print("Digite");
-										System.out.print("1 para CONFIRMAR");
-										System.out.print("2 para CORRIGIR");
+										System.out.println("Digite ");
+										System.out.println("1 para CONFIRMAR");
+										System.out.println("2 para CORRIGIR");
 										
 										menu = scan.nextInt();
 										if (menu == 1) {
@@ -135,30 +135,30 @@ public class Principal {
 										} else if (menu == 2) {
 											System.out.println("Corrija o voto!");
 										} else {
-											System.out.println("OpÃ§Ã£o incorreta");
+											System.out.println("Opção incorreta");
 										}
 										
 									} else {
-										System.out.println("Candidato nÃ£o encontrado!");
+										System.out.println("Candidato não encontrado!");
 									}
 									
 								}
 								
 							} while ( voto == false );
 							
-							// Libera a votaÃ§Ã£o para outro candidato
+							// Libera a votação para outro candidato
 							voto = false;
 							
 							// Votar para vereador
 							do {
 								
-								System.out.println("Digite o nÃºmero do seu candidato a VEREADOR com cinco digitos");
+								System.out.println("Digite o número do seu candidato a VEREADOR com cinco digitos");
 								System.out.println("ou 0 para votar em  BRANCO");
 								System.out.println("ou -1 para votar NULO");
 								
 								numero = scan.nextInt();
 								
-								if (numero >= -1 && numero < 100) {
+								if (numero == -1 || numero == 0 || (numero > 9999 && numero < 100000)) {
 									
 									vereador = urna.buscarVereador(numero);
 									if (vereador != null) {
@@ -166,9 +166,9 @@ public class Principal {
 										System.out.println("Candidato: " + vereador.getNome());
 										System.out.println("Partido: " + vereador.getPartido());
 										
-										System.out.print("Digite");
-										System.out.print("1 para CONFIRMAR");
-										System.out.print("2 para CORRIGIR");
+										System.out.println("Digite");
+										System.out.println("1 para CONFIRMAR");
+										System.out.println("2 para CORRIGIR");
 										
 										menu = scan.nextInt();
 										if (menu == 1) {
@@ -178,19 +178,21 @@ public class Principal {
 										} else if (menu == 2) {
 											System.out.println("Corrija o voto!");
 										} else {
-											System.out.println("OpÃ§Ã£o incorreta");
+											System.out.println("Opção incorreta");
 										}
 										
 									} else {
-										System.out.println("Candidato nÃ£o encontrado!");
+										System.out.println("Candidato não encontrado!");
 									}
 									
 								}
 								
 							} while ( voto == false );
 							
-						} else {
-							System.out.println("Numero de eleitor invÃ¡lido ou eleitor jÃ¡ votou!");
+						} else if(eleitor == null){
+							System.out.println("Numero de eleitor inválido!");
+						} else if(eleitor.getVotos() != 0){
+							System.out.println("Este eleitor já votou!");
 						}
 						
 					} else {
@@ -198,7 +200,7 @@ public class Principal {
 						tempSenha = scan.nextInt();
 						
 						if (admSenha == tempSenha) {
-							System.out.println("Encerrando votaÃ§Ã£o.");
+							System.out.println("Encerrando votação.");
 							sair = true;
 						}
 					}
