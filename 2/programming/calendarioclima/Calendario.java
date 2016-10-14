@@ -49,4 +49,13 @@ public class Calendario {
 		return (soma/dias.length);
 	}
 	
+	public void getTemperaturasAltas(){
+		int i;
+		for(i = 0; i < this.dias.length; i++){
+			if (dias[i] > this.getMedia()) {
+				System.out.println( (i+1) + " = " + dias[i]);
+			}
+		}
+	}
+	
 }
